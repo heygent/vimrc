@@ -12,8 +12,6 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'edkolev/promptline.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
 
 call vundle#end()
 filetype plugin indent on
@@ -41,12 +39,10 @@ set textwidth=80
 set laststatus=2
 set incsearch
 
-autocmd VimEnter * AirlineTheme base16_monokai
+autocmd VimEnter * AirlineTheme base16_default
 
 augroup project
   autocmd!
   autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
 augroup END
 
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_confirm_extra_conf = 0
